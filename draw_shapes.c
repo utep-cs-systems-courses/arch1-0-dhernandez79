@@ -7,6 +7,7 @@ void print_square(int leftCol, int size)
   int i, j;
   int endCol = leftCol + size;
   for (int row = 0; row < size; row++){
+    printf("    ");
     int col;
     for (col = 0; col < leftCol; col++) putchar(' ');
     for (       ; col < endCol;  col++) putchar('*');
@@ -26,3 +27,9 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+//prints an arrow
+void print_arrow() {
+  print_triangle(5,7);
+  print_square(5,5);
+  putchar('\n');
+}
